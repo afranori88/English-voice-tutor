@@ -1,0 +1,59 @@
+# Simple Web-Based English Speaking Practice Tool
+
+This tool allows users to practice their English speaking skills using only browser technologies. It utilizes the Web Speech API for voice recognition and speech synthesis.
+
+## Features
+
+*   **Voice Recognition**: Captures user's spoken English using `SpeechRecognition`.
+*   **Text Display**: Shows the transcribed text in a chat-like interface.
+*   **Spoken Responses**: Uses `SpeechSynthesis` to read out predefined responses or repeat/acknowledge user's speech.
+*   **Basic Grammar Correction**: Implements very simple, rule-based grammar correction for common mistakes.
+*   **Unlimited Conversation**: Users can continue the conversation as long as they wish.
+*   **Browser-Only**: No backend, API keys, or external servers required. Runs entirely in the client's browser.
+
+## Technologies Used
+
+*   HTML5
+*   CSS3
+*   JavaScript (ES6+)
+*   Web Speech API:
+    *   `SpeechRecognition` (for Speech-to-Text)
+    *   `SpeechSynthesis` (for Text-to-Speech)
+
+## How to Run
+
+1.  **Download or Clone:**
+    *   Download the ZIP of this project and extract it.
+    *   OR Clone the repository: `git clone <repository-url>` (if it were in a repo)
+
+2.  **Open `index.html`:**
+    *   Navigate to the project folder.
+    *   Open the `index.html` file directly in a modern web browser that supports the Web Speech API (e.g., Google Chrome, Microsoft Edge). Firefox support for `SpeechRecognition` might require enabling flags or might be partial.
+
+3.  **Grant Microphone Access:**
+    *   When you first click "Start Talking", your browser will prompt you for permission to use your microphone. You **must** allow this for the tool to work.
+
+4.  **Start Practicing:**
+    *   Click the "Start Talking" button.
+    *   Speak clearly into your microphone.
+    *   The tool will transcribe your speech, display it, and provide a spoken response.
+    *   The "Start Talking" button will re-enable for your next turn.
+
+## Browser Compatibility
+
+*   **Speech Recognition (`SpeechRecognition`)**:
+    *   Best support in **Google Chrome** and **Microsoft Edge**.
+    *   Firefox has experimental support, often requiring flags to be enabled (`media.webspeech.recognition.enable` in `about:config`) and may not be as robust.
+    *   Safari has support but might have different implementation nuances.
+*   **Speech Synthesis (`speechSynthesis`)**:
+    *   Widely supported in modern browsers.
+
+If you encounter issues, please ensure you are using an up-to-date version of a compatible browser and have granted microphone permissions.
+
+## Known Limitations & Potential Improvements
+
+*   **Grammar Correction**: The current grammar correction is very basic and rule-based. It only catches a few predefined common errors.
+*   **Natural Language Understanding**: There's no sophisticated NLU. Responses are based on simple keyword matching.
+*   **Voice Variety**: Voice selection for speech synthesis is basic; it tries to find a female US English voice but might fall back to browser defaults.
+*   **Error Handling**: Basic error handling is in place, but could be more comprehensive.
+*   **Contextual Conversation**: The bot does not maintain conversation context beyond the immediate turn.

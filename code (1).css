@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for chatbox growth */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#startButton:hover {
+    background-color: #218838;
+}
+
+#startButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#status {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 20px; /* Prevent layout shift */
+}
+
+.status-idle { color: #6c757d; }
+.status-listening { color: #17a2b8; font-weight: bold; }
+.status-processing { color: #ffc107; }
+.status-error { color: #dc3545; }
+
+
+#chatbox {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 1.4;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    margin-left: 40px; /* Indent user messages */
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #e9ecef;
+    color: #333;
+    margin-right: 40px; /* Indent bot messages */
+}
+
+.bot-message strong {
+    color: #0056b3;
+}
